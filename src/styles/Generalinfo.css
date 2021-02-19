@@ -1,0 +1,17 @@
+.general-info-form {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.general-info-form input {
+    display: inline-block;
+    width: 25rem;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+
+}
+
+.general-info-form label {
+    font-size: 2.5rem;
+}
