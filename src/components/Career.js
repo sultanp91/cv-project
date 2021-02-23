@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
+import Jobs from './Jobs';
 
 class Career extends Component {
   constructor() {
@@ -12,6 +13,8 @@ class Career extends Component {
       dateTo: "",
       duties: '',
     };
+    this.submitHandler = this.submitHandler.bind(this)
+    this.editJobs = this.editJobs.bind(this)
   }
 
   roleHandler = (evt) => {
@@ -48,13 +51,26 @@ class Career extends Component {
       evt.preventDefault();
       this.setState({
         jobs: [...this.state.jobs, {role: this.state.role, company: this.state.company, dateFrom: this.state.dateFrom, 
-        dateTo: this.state.dateTo, duties: this.state.duties, key: uniqid()}],
+        dateTo: this.state.dateTo, duties: this.state.duties, id: uniqid()}],
         role: '',
         company: '',
         dateFrom: "",
         dateTo: "",
         duties: '',
       })
+  }
+
+  editJobs = (evt) => {
+   const jobs = Object.assign([],this.state.jobs)
+
+   jobs.map((job) => {
+     if(evt.target.id === job.id){
+       job.role = evt.target.value
+     }
+   })
+   this.setState({
+     jobs: jobs
+   })
   }
 
   render() {
@@ -69,6 +85,7 @@ class Career extends Component {
           <textarea name="" value={this.state.duties} onChange={this.dutiesHandler} cols="40" rows="5" placeholder="Enter details of role..." />
           <button onClick={this.submitHandler}>Submit</button>
         </form>
+       {this.state.jobs.map((job) => <Jobs role={job.role} id={job.id} key={job.id} editJobs={this.editJobs}/>)}
       </div>
     );
   }

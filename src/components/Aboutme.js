@@ -11,14 +11,14 @@ class Aboutme extends Component {
       rutrum congue finibus. Aenean at pharetra mauris. Aenean faucibus ipsum nisi, eu eleifend dui 
       consequat in. Curabitur venenatis ligula vel nunc ullamcorper pulvinar. Sed pretium purus non 
       malesuada imperdiet.`,
-      form: false
+      form: false,
     };
   }
 
   formHandler = (evt) => {
-      this.setState({
-          aboutMe: evt.target.value
-      })
+    this.setState({
+      aboutMe: evt.target.value
+    })
   }
   editHandler = () => {
     this.setState({
