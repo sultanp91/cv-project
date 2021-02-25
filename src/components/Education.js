@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import uniqid from 'uniqid';
+import Studies from './Studies';
 
 class Education extends Component {
     constructor(){
@@ -22,7 +23,7 @@ class Education extends Component {
     }
 
     submitHandler = (evt) => {
-        evt.preventDfault()
+        evt.preventDefault();
         this.setState({
             education: [...this.state.education, {course: this.state.course, institution: this.state.institution,
             dateFrom: this.state.dateFrom, dateTo: this.state.dateTo, details: this.state.details,
@@ -32,7 +33,7 @@ class Education extends Component {
             dateFrom: "",
             dateTo: "",
             details: ""
-        })
+        });
     }
 
     editStudies = (evt) => {
@@ -65,7 +66,12 @@ class Education extends Component {
                     <input type="date" name="dateto" data-key="dateTo" value={this.state.dateTo} onChange={this.inputHandler}/>
                     <label htmlFor="details">Details: </label>
                     <input type="text" data-key="details" name="details" value={this.state.details} onChange={this.inputHandler} />
+                    <button onClick={this.submitHandler}>Submit</button>
                 </form>
+            {this.state.education.map((edu) => 
+                <Studies key={edu.id} id={edu.id} editStudies={this.editStudies} course={edu.course} institution={edu.institution} 
+                dateFrom={edu.dateFrom} dateTo={edu.dateTo} details={edu.details}  />
+            )}
             </div>
         )
     }
