@@ -1,16 +1,52 @@
+.general-info {
+    position: relative;
+    min-height: 15rem;
+}
+
 .general-info-form {
-    margin: 0 auto;
     padding: 2rem 0;
+    line-height: 1.5;
 }
 
 .general-info-form input {
-    display: inline-block;
+    display: block;
     width: 25rem;
-    padding: 1rem 0;
-    font-size: 2.5rem;
+    padding: 0.5rem 0;
+    font-size: 1.8rem;
+}
 
+.general-info-form input:focus {
+    outline: solid 1px #6495ED;
 }
 
 .general-info-form label {
+    font-size: 2rem;
+}
+
+.general-info-content h1 {
+    font-size: 4.5rem;
+    padding: 0.5rem 0;
+}
+
+.general-info-content h2 {
+    font-size: 3rem;
+    padding: 0.5rem 0;
+}
+
+.general-info-content p {
+    font-size: 2rem;
+}
+
+.general-info-icon {
     font-size: 2.5rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.contact {
+    display: flex;
+}
+.contact p {
+    width: 50%;
 }
