@@ -9,18 +9,21 @@
 }
 
 .general-info-form input {
-    display: block;
     width: 25rem;
     padding: 0.5rem 0;
     font-size: 1.8rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
-.general-info-form input:focus {
+input:focus, textarea:focus {
     outline: solid 1px #6495ED;
 }
 
 .general-info-form label {
     font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
 }
 
 .general-info-content h1 {

@@ -19,3 +19,11 @@
     color: rgb(0,0,0);
     transform: scale(1.1);
 }
+
+.jobs-form textarea {
+    margin: 1rem 0;
+}
+
+.jobs-form input {
+    margin-right: 1rem;
+}

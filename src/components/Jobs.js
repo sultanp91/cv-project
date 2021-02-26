@@ -54,9 +54,9 @@ static propTypes = {
            <br/>
            <label>Start Date:</label>
            <input type="date" id={this.props.id} data-key="dateFrom" onChange={this.props.editJobs} value={this.props.dateFrom} />
-           <label>End Date:</label> <br/>
-           <label>Details: </label>
+           <label>End Date:</label>
            <input type="date" id={this.props.id} data-key="dateTo" onChange={this.props.editJobs} value={this.props.dateTo} />
+           <br/><label>Details: </label>
            <textarea rows="5" id={this.props.id} placeholder="Job details" data-key="duties" onChange={this.props.editJobs} value={this.props.duties}/>
            <IoIosSave class="edit-icon" onClick={this.editMode} id={this.props.id}/>
            <IoTrashOutline class="icon" id={this.props.id} onClick={this.props.deleteJobs}/>

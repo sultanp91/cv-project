@@ -15,7 +15,7 @@ class Career extends Component {
       dateFrom: "",
       dateTo: "",
       duties: '',
-      displayForm: false
+      displayForm: true
     };
   }
 

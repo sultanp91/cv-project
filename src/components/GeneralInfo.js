@@ -41,7 +41,7 @@ class GeneralInfo extends Component {
                             <label htmlFor="jobTitle">Job Title: </label>
                             <input type="text" data-key="jobTitle" onChange={this.inputHandler} placeholder="Enter job title"
                             value={this.state.jobTitle} id="jobTitle"/>
-                            <label htmlFor="emailInput">Email: </label>
+                            <br/><label htmlFor="emailInput">Email: </label>
                             <input type="email" data-key="email" onChange={this.inputHandler} value={this.state.email} 
                             placeholder="Enter e-mail" id="emailInput"/>
                             <label htmlFor="phoneInput">Phone Number: </label>
