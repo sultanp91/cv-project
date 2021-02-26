@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { IoIosSave } from "react-icons/io";
+import { FaUserEdit } from "react-icons/fa";
+import '../styles/Aboutme.css';
 
 class Aboutme extends Component {
   constructor() {
@@ -31,23 +34,23 @@ class Aboutme extends Component {
     
     if(this.state.form){
         return (
-            <div>
+            <div className="about-me-form">
                 <form>
-                    <label htmlFor="aboutme">About me</label>
-                    <textarea name="aboutme" onChange={this.formHandler} value={this.state.aboutMe} id="aboutme" 
-                    cols="50" rows="15">
-      
-                    </textarea>
+                    <h2>About me</h2>
+  
+                    <textarea onChange={this.formHandler} value={this.state.aboutMe} id="aboutme" rows="8" />
                 </form>
-                <button onClick={this.editHandler}>Submit</button>
+                <hr/>
+                <IoIosSave onClick={this.editHandler} className="icon" />
             </div>
           );
     } else if(!this.state.form){
         return (
-            <div>
-                <h1>About me</h1>
+            <div className="about-me-content">
+                <h2>About me</h2>
                 <p>{this.state.aboutMe}</p>
-                <button onClick={this.editHandler}>Edit</button>
+                <hr/>
+                <FaUserEdit onClick={this.editHandler} className="icon" />
             </div>
             
 

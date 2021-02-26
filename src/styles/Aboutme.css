@@ -1,0 +1,20 @@
+.about-me-form textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.about-me-form, .about-me-content {
+    position: relative;
+    
+}
+
+.about-me-form h2, .about-me-content h2 {
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.about-me-content p {
+    font-size: 2rem;
+}

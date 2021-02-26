@@ -12,7 +12,7 @@ class GeneralInfo extends Component {
             jobTitle: "Web Developer",
             phoneNumber: "07900000000",
             email: "example@lorem.com",
-            form: true
+            form: false
         }
     }
 
@@ -50,7 +50,8 @@ class GeneralInfo extends Component {
 
 
                     </form>
-                    <IoIosSave onClick={this.editHandler} className="general-info-icon" />      
+                    <IoIosSave onClick={this.editHandler} className="icon" />  
+                    <hr/>    
                 </div>
             )
         } else if(!this.state.form){
@@ -65,7 +66,7 @@ class GeneralInfo extends Component {
                         <p>Number: {this.state.phoneNumber}</p>
                         </div>
                         
-                        <FaUserEdit onClick={this.editHandler} className="general-info-icon" />
+                        <FaUserEdit onClick={this.editHandler} className="icon" />
                     </div>
                     <hr/>
                 </div>

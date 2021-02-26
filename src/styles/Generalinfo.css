@@ -37,11 +37,18 @@
     font-size: 2rem;
 }
 
-.general-info-icon {
+.icon {
+    color: rgba(0, 0, 0, 0.3);;
     font-size: 2.5rem;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 5px;
+    top: 5px;
+    transition: all linear 0.2s;
+}
+
+.icon:hover {
+    color: rgb(0,0,0);
+    transform: scale(1.1);
 }
 
 .contact {

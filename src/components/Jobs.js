@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
+import { IoTrashOutline } from 'react-icons/io5';
+import { FaRegEdit } from 'react-icons/fa';
+import { IoIosSave } from "react-icons/io";
+import '../styles/Jobs.css';
 
 class Jobs extends Component {
   constructor(props) {
@@ -24,29 +28,32 @@ static propTypes = {
     duties: PropTypes.string,
     id: PropTypes.string,
     editJobs: PropTypes.func,
+    deleteJobs: PropTypes.func,
   }
   render() {
 
      if(!this.state.editMode){
       return (
-        <div>
-         <h1>{this.props.role}</h1>
-         <h2>{this.props.company}</h2>
-         <p> {format(new Date(this.props.dateFrom), "do MMMM yy")} to 
-         {format(new Date(this.props.dateTo), "do MMMM yy")}</p>
+        <div className="jobs-content">
+         <p><b>{this.props.role}</b></p>
+         <p>{this.props.company}</p>
+         <p><em>{format(new Date(this.props.dateFrom), "do MMMM yy")} to 
+         {format(new Date(this.props.dateTo), "do MMMM yy")}</em></p>
          <p>{this.props.duties}</p>
-         <button onClick={this.editMode}>Change</button>
+         <FaRegEdit class="edit-icon" onClick={this.editMode} id={this.props.id}/>
+         <IoTrashOutline class="icon" id={this.props.id} onClick={this.props.deleteJobs}/>
         </div>
       )
      }  else if(this.state.editMode){
        return (
-         <div>
-           <input type="text" id={this.props.id} data-key="role" onChange={this.props.editJobs} value={this.props.role}/>
-           <input type="text" id={this.props.id} data-key="company" onChange={this.props.editJobs} value={this.props.company}/>
+         <div className="jobs-form">
+           <input type="text" id={this.props.id} placeholder="Role" data-key="role" onChange={this.props.editJobs} value={this.props.role}/>
+           <input type="text" id={this.props.id} placeholder="Company/Organisation"  data-key="company" onChange={this.props.editJobs} value={this.props.company}/>
            <input type="date" id={this.props.id} data-key="dateFrom" onChange={this.props.editJobs} value={this.props.dateFrom} />
            <input type="date" id={this.props.id} data-key="dateTo" onChange={this.props.editJobs} value={this.props.dateTo} />
-           <input type="text" id={this.props.id} data-key="duties" onChange={this.props.editJobs} value={this.props.duties}/>
-           <button onClick={this.editMode}>Change</button>
+           <textarea id={this.props.id} placeholder="Job details" data-key="duties" onChange={this.props.editJobs} value={this.props.duties}/>
+           <IoIosSave class="edit-icon" onClick={this.editMode} id={this.props.id}/>
+           <IoTrashOutline class="icon" id={this.props.id} onClick={this.props.deleteJobs}/>
          </div>
        )
      }
