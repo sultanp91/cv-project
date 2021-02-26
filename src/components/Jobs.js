@@ -47,11 +47,17 @@ static propTypes = {
      }  else if(this.state.editMode){
        return (
          <div className="jobs-form">
+           <label>Role: </label>
            <input type="text" id={this.props.id} placeholder="Role" data-key="role" onChange={this.props.editJobs} value={this.props.role}/>
+           <label>Company</label>
            <input type="text" id={this.props.id} placeholder="Company/Organisation"  data-key="company" onChange={this.props.editJobs} value={this.props.company}/>
+           <br/>
+           <label>Start Date:</label>
            <input type="date" id={this.props.id} data-key="dateFrom" onChange={this.props.editJobs} value={this.props.dateFrom} />
+           <label>End Date:</label> <br/>
+           <label>Details: </label>
            <input type="date" id={this.props.id} data-key="dateTo" onChange={this.props.editJobs} value={this.props.dateTo} />
-           <textarea id={this.props.id} placeholder="Job details" data-key="duties" onChange={this.props.editJobs} value={this.props.duties}/>
+           <textarea rows="5" id={this.props.id} placeholder="Job details" data-key="duties" onChange={this.props.editJobs} value={this.props.duties}/>
            <IoIosSave class="edit-icon" onClick={this.editMode} id={this.props.id}/>
            <IoTrashOutline class="icon" id={this.props.id} onClick={this.props.deleteJobs}/>
          </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import uniqid from 'uniqid';
 import Jobs from './Jobs';
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import '../styles/Career.css';
 
 class Career extends Component {
@@ -90,7 +90,7 @@ class Career extends Component {
             <input required data-key="dateTo" value={this.state.dateTo} onChange={this.inputHandler} type="date" />
             <br/>
             <textarea required name="" data-key="duties" value={this.state.duties} onChange={this.inputHandler} rows="5" placeholder="Enter details of role..." />
-            <button className="career-button" type="submit" onSubmit={this.submitHandler}>Add Work Experience</button>
+            <button className="add-button" type="submit" onSubmit={this.submitHandler}>Add Work Experience</button>
           </form>
          {this.state.jobs.map((job) => <Jobs role={job.role} company={job.company} id={job.id} dateFrom={job.dateFrom}
          dateTo={job.dateTo} duties={job.duties} key={job.id} editJobs={this.editJobs} deleteJobs={this.deleteJobs} />)}

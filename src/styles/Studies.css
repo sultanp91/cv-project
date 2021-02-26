@@ -1,0 +1,25 @@
+.studies {
+    position: relative;
+}
+
+.studies input{
+    padding: 0.5rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.studies textarea {
+    font-size: 2rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.studies label {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.studies {
+    font-size: 2rem;
+}

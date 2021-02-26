@@ -1,0 +1,25 @@
+.education-content, .education-form {
+    position: relative;
+}
+
+.education-form textarea {
+    width: 100%;
+    font-size: 2rem;
+}
+
+.education-form h2, .education-content h2 {
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.education-form input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.education-form label {
+    font-size: 2rem;
+    margin-right: 1rem;
+}

@@ -21,13 +21,15 @@
     margin: 0.5rem 0;
     margin-right: 0.5rem;
     padding: 0.5rem;
+    font-size: 2rem;
 }
 
 .work-experience textarea {
-    width: 100%
+    width: 100%;
+    font-size: 2rem;
 }
 
-.career-button {
+.add-button {
     display: block;
     color: black;
     background-color: white;
