@@ -10,3 +10,14 @@ hr {
 label {
   font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+  
+  html{
+    font-size: 50%
+  }
+  .App{
+    max-width: 95%;
+  }
+  
+}
